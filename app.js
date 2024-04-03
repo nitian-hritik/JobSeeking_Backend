@@ -14,7 +14,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: ["https://vercel.com/hritik-kumar-s-projects/job-seeking-frontend/6aEUooTpgj77UGDMP1UvHQduxcGT","http://localhost:5173"],
+    origin: ["https://job-seeking-frontend-sooty.vercel.app","http://localhost:5173"],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
