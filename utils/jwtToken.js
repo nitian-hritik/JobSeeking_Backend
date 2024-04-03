@@ -2,7 +2,15 @@ export const sendToken = (user, statusCode, res, message) => {
   const token = user.getJWTToken();
   const options = {
     maxAge: 24*60*60*1000,
-    httpOnly: true, // Set httpOnly to true
+    // for deployment
+
+    // sameSite:"none",
+    // secure:true,
+    // httpOnly: false, // Set httpOnly to true
+
+    //for localhost
+    httpOnly:true,
+    secure:false,
   };
 
   res.status(statusCode).cookie("token", token, options).json({
